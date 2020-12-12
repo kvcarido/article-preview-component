@@ -1,0 +1,95 @@
+:root {
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-300: hsl(210, 46%, 95%);
+
+  --clr-primary-400: hsl(212, 23%, 69%);
+  --clr-primary-500: hsl(214, 17%, 51%);
+  --clr-primary-700: hsl(217, 19%, 35%);
+
+  --ff-base: "Manrope", sans-serif;
+
+  --fs-400: 0.8125rem;
+  --fs-700: 1.25rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --spacer: 1rem;
+  --box-shadow: -5px 5px 10px var(--clr-grey-700);
+}
+
+/*********/
+/* reset */
+/*********/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  line-height: 1.2;
+}
+
+ol[class],
+ul[class] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-500);
+  line-height: 1.5;
+  background-color: var(--clr-neutral-300);
+}
+
+/*******************/
+/* utility classes */
+/*******************/
+
+.flow-content > * + * {
+  margin-top: var(--br);
+}
+
+.container {
+  padding: 0 var(--spacer);
+  max-width: 45.625rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/******************/
+/* general layout */
+/******************/
+
+/*******************/
+/* general styling */
+/*******************/
