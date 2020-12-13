@@ -76,9 +76,14 @@ body {
 }
 
 .container {
+  outline: red 1px solid;
   padding: 0 var(--spacer);
-  max-width: 45.625rem;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .flex {
@@ -86,10 +91,41 @@ body {
   flex-direction: column;
 }
 
+@media screen and (min-width: 40rem) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
 /******************/
 /* general layout */
 /******************/
 
+.card {
+  max-width: 45.625rem;
+  background-color: var(--clr-neutral-100);
+  border-radius: var(--spacer);
+  overflow: hidden;
+}
+
+.card > * {
+  flex: 1 0.5 100%;
+}
+
+.card > div:nth-child(1) {
+  flex-basis: 40%;
+}
+
+.card > div:nth-child(2) {
+  flex-basis: 60%;
+}
+
 /*******************/
 /* general styling */
 /*******************/
+
+.card__img {
+  background-image: url(/images/drawers.jpg);
+  background-position: center;
+  background-size: cover;
+}
