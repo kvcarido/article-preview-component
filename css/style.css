@@ -15,6 +15,9 @@
   --fw-700: 700;
 
   --spacer: 1rem;
+  --text-padding: 2.5rem;
+  --profile-pic: 3rem;
+
   --box-shadow: -5px 5px 10px var(--clr-grey-700);
 }
 
@@ -43,7 +46,7 @@ h1,
 .h1,
 h2,
 .h2 {
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 ol[class],
@@ -64,6 +67,7 @@ body {
   font-size: var(--fs-400);
   font-weight: var(--fw-500);
   line-height: 1.5;
+  color: var(--clr-primary-700);
   background-color: var(--clr-neutral-300);
 }
 
@@ -72,11 +76,10 @@ body {
 /*******************/
 
 .flow-content > * + * {
-  margin-top: var(--br);
+  margin-top: var(--spacer);
 }
 
 .container {
-  outline: red 1px solid;
   padding: 0 var(--spacer);
   margin: 0 auto;
   min-height: 100vh;
@@ -120,6 +123,10 @@ body {
   flex-basis: 60%;
 }
 
+.card__text {
+  padding: var(--text-padding);
+}
+
 /*******************/
 /* general styling */
 /*******************/
@@ -128,4 +135,15 @@ body {
   background-image: url(/images/drawers.jpg);
   background-position: center;
   background-size: cover;
+  min-height: 17.5rem;
+}
+
+h1 {
+  font-size: var(--fs-700);
+}
+
+.profile-pic {
+  max-height: var(--profile-pic);
+  max-width: var(--profile-pic);
+  border-radius: var(--profile-pic);
 }
