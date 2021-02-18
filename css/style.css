@@ -161,7 +161,7 @@ body {
 /*******************/
 
 .card__img {
-  background-image: url(/images/drawers.jpg);
+  background-image: url(/article-preview-component/images/drawers.jpg);
   background-position: center;
   background-size: cover;
   min-height: 17.5rem;
