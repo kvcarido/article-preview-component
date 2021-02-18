@@ -14,11 +14,12 @@
   --fw-500: 500;
   --fw-700: 700;
 
-  --spacer: 1rem;
+  --spacer: 1.25rem;
+  --social-share: 2rem;
   --text-padding: 2.5rem;
   --profile-pic: 3rem;
 
-  --box-shadow: -5px 5px 10px var(--clr-grey-700);
+  --box-shadow: -5px 5px 25px hsl(217, 19%, 35%, 0.2);
 }
 
 /*********/
@@ -67,7 +68,7 @@ body {
   font-size: var(--fs-400);
   font-weight: var(--fw-500);
   line-height: 1.5;
-  color: var(--clr-primary-700);
+  color: var(--clr-primary-500);
   background-color: var(--clr-neutral-300);
 }
 
@@ -92,6 +93,10 @@ body {
 .flex {
   display: flex;
   flex-direction: column;
+}
+
+.box-shadow {
+  box-shadow: var(--box-shadow);
 }
 
 @media screen and (min-width: 40rem) {
@@ -124,7 +129,31 @@ body {
 }
 
 .card__text {
-  padding: var(--text-padding);
+  padding: var(--spacer);
+}
+
+@media screen and (min-width: 40rem) {
+  .card__text {
+    padding: var(--text-padding);
+  }
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-profile > * {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.user-info {
+  flex-basis: 70%;
+}
+
+.user-img {
+  flex-basis: 15%;
 }
 
 /*******************/
@@ -140,10 +169,29 @@ body {
 
 h1 {
   font-size: var(--fs-700);
+  color: var(--clr-primary-700);
 }
 
 .profile-pic {
   max-height: var(--profile-pic);
   max-width: var(--profile-pic);
   border-radius: var(--profile-pic);
+}
+
+.date {
+  color: var(--clr-primary-400);
+}
+
+.social-share {
+  min-height: var(--social-share);
+  min-width: var(--social-share);
+  border-radius: var(--social-share);
+  background-color: var(--clr-neutral-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animate__animated.animate__slideInUp {
+  --animate-duration: 500ms;
 }
