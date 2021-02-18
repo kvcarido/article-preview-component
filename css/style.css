@@ -167,11 +167,6 @@ body {
   min-height: 17.5rem;
 }
 
-h1 {
-  font-size: var(--fs-700);
-  color: var(--clr-primary-700);
-}
-
 .profile-pic {
   max-height: var(--profile-pic);
   max-width: var(--profile-pic);
@@ -194,4 +189,20 @@ h1 {
 
 .animate__animated.animate__slideInUp {
   --animate-duration: 500ms;
+}
+
+h1 {
+  font-size: var(--fs-700);
+  color: var(--clr-primary-700);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary-400);
+  border-bottom: 1px solid var(--clr-primary-700);
+}
+
+a:hover {
+  color: var(--clr-primary-700);
+  border-bottom: 1px solid var(--clr-primary-400);
 }
